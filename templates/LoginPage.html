@@ -1,0 +1,32 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+    <title>HomePage</title>
+{% endblock %}
+
+{% block body %}
+<style>
+    center{
+        margin-top:100px;
+    }
+</style>
+        <center>
+            <form  method="post">
+                {% csrf_token %}
+                <label for="un">Username</label>
+                <input type="text" name="un" id="un"><br>
+                <label for="pw">Password</label>
+                <input type="password" name="pw" id="pw"><br>
+
+                <input type="submit" value="Login/SignUp" class=" btn btn-dark bg-primary mt-2">
+
+                <a href="{% url 'ResetPasswordPage' %}">ResetPassword</a>
+
+
+
+                
+                
+   
+           </form>
+        </center>
+{% endblock %}

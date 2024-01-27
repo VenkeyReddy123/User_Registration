@@ -1,0 +1,13 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+    <title>HomePage</title>
+{% endblock %}
+
+{% block body %}
+{% if un %}
+<h1>Welcome TO Page Mr/Ms {{un}}</h1>
+{% else %}
+<h1>Welcome To Page</h1>
+{% endif %}
+{% endblock %}
